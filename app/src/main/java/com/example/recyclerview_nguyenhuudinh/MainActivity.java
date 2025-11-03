@@ -54,19 +54,19 @@ public class MainActivity extends AppCompatActivity implements androidVersionAda
         ArrayList<androidVersion> dataList = new ArrayList<>();
 
         if (listNumber == 1) {
-            dataList.add(new androidVersion("Kitkat", "4.4-4.4.4", "kitkat"));
-            dataList.add(new androidVersion("Lollipop", "5.0-5.1.1", "lollipop"));
-            dataList.add(new androidVersion("Marshmallow", "6.0-6.0.1", "marshmallow"));
+            dataList.add(new androidVersion("iPhone 15 Pro", "$999", "iphone"));
+            dataList.add(new androidVersion("Samsung Galaxy S24", "$899", "samsung"));
+            dataList.add(new androidVersion("Xiaomi 14 Ultra", "$799", "xiaomi"));
             this.list1 = dataList;
         } else if (listNumber == 2) {
-            dataList.add(new androidVersion("Gingerbread", "2.3-2.3.7", "gingerbread"));
-            dataList.add(new androidVersion("Honeycomb", "3.0-3.2.6", "honeycomb"));
-            dataList.add(new androidVersion("Ice Cream Sandwich", "4.0-4.0.4", "icecreamsandwich"));
+            dataList.add(new androidVersion("MacBook Air M3", "$1199", "macbook"));
+            dataList.add(new androidVersion("Dell XPS 13", "$1099", "dell"));
+            dataList.add(new androidVersion("HP Spectre x360", "$1299", "hp"));
             this.list2 = dataList;
         } else {
-            dataList.add(new androidVersion("Cupcake", "1.5", "cupcake"));
-            dataList.add(new androidVersion("Donut", "1.6", "donut"));
-            dataList.add(new androidVersion("Eclair", "2.0-2.1", "eclair"));
+            dataList.add(new androidVersion("iPad Pro M4", "$999", "ipad"));
+            dataList.add(new androidVersion("Galaxy Tab S9", "$899", "tab"));
+            dataList.add(new androidVersion("Lenovo Yoga Tab", "$699", "lenovo"));
             this.list3 = dataList;
         }
 
@@ -80,14 +80,11 @@ public class MainActivity extends AppCompatActivity implements androidVersionAda
         recyclerView.setAdapter(adapter);
     }
 
-    @Override
     public void onItemClicked(int index) {
-        // Khi click vào item (ở đây chỉ demo cho list1)
         if (list1 != null && index < list1.size()) {
-            androidVersion clickedItem = list1.get(index);
+            androidVersion clicked = list1.get(index);
             Toast.makeText(this,
-                    "Bạn đã chọn: " + clickedItem.getName() +
-                            " (Phiên bản: " + clickedItem.getVersion() + ")",
+                    "Bạn chọn: " + clicked.getName() + " - Giá: " + clicked.getVersion(),
                     Toast.LENGTH_SHORT).show();
         }
     }

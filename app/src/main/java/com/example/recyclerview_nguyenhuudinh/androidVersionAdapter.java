@@ -48,22 +48,46 @@ public class androidVersionAdapter extends RecyclerView.Adapter < androidVersion
     }
 
     @Override
-    public void onBindViewHolder(@NonNull androidVersionAdapter.Viewholder holder, int position) {
-        androidVersion current = androidList.get(position);
+    public void onBindViewHolder(@NonNull Viewholder holder, int position) {
+        androidVersion item = androidList.get(position);
 
-        holder.tvnam.setText(current.getName());
-        holder.tvversion.setText(current.getVersion());
+        holder.tvnam.setText(item.getName());
+        holder.tvversion.setText(item.getVersion());
 
-        if (current.getPrefer().equals("cupcake")) {
-            holder.ivicon.setImageResource(R.drawable.android_cupcake);
-        } else {
-            holder.ivicon.setImageResource(R.drawable.android_donut);
+        switch (item.getPrefer()) {
+            case "iphone":
+                holder.ivicon.setImageResource(R.drawable.iphone);
+                break;
+            case "samsung":
+                holder.ivicon.setImageResource(R.drawable.samsung);
+                break;
+            case "macbook":
+                holder.ivicon.setImageResource(R.drawable.macbook);
+                break;
+            case "hp":
+                holder.ivicon.setImageResource(R.drawable.hp);
+                break;
+            case "xiaomi":
+                holder.ivicon.setImageResource(R.drawable.xiaomi);
+                break;
+            case "dell":
+                holder.ivicon.setImageResource(R.drawable.dell);
+                break;
+            case "ipad":
+                holder.ivicon.setImageResource(R.drawable.ipad);
+                break;
+            case "tab":
+                holder.ivicon.setImageResource(R.drawable.tab);
+                break;
+            case "lenovo":
+                holder.ivicon.setImageResource(R.drawable.lenovo);
+                break;
+            default:
+                holder.ivicon.setImageResource(R.drawable.android_donut); // icon mặc định
+                break;
         }
 
-        // ✅ Sự kiện click item
-        holder.itemView.setOnClickListener(v -> {
-            activity.onItemClicked(position);
-        });
+        holder.itemView.setOnClickListener(v -> activity.onItemClicked(position));
     }
 
     //getItemCount method for returning the size of arrayList

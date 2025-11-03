@@ -23,8 +23,6 @@
             android:text="Thêm vào danh sách"
             android:textAllCaps="false"
             android:textStyle="bold"
-            android:iconGravity="start"
-            android:iconPadding="8dp"
             android:layout_marginBottom="24dp" />
 
         <!-- Danh sách 1 -->
