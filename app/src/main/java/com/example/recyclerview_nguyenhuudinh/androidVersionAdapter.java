@@ -47,25 +47,29 @@ public class androidVersionAdapter extends RecyclerView.Adapter < androidVersion
         return new Viewholder(v); //return viewholder
     }
 
-    //onBindViewHolder method to bind different resourses with our holder
     @Override
     public void onBindViewHolder(@NonNull androidVersionAdapter.Viewholder holder, int position) {
-        holder.itemView.setTag(androidList.get(position)); //get the position in the arrayList
-        holder.tvnam.setText(androidList.get(position)
-                .getName()); //set text for name of android
-        holder.tvversion.setText(androidList.get(position)
-                .getVersion()); //set text for version
-        if (androidList.get(position)
-                .getPrefer()
-                .equals("cupcake")) {
-            holder.ivicon.setImageResource(R.drawable.android_cupcake); //get icon
+        androidVersion current = androidList.get(position);
+
+        holder.tvnam.setText(current.getName());
+        holder.tvversion.setText(current.getVersion());
+
+        if (current.getPrefer().equals("cupcake")) {
+            holder.ivicon.setImageResource(R.drawable.android_cupcake);
         } else {
-            holder.ivicon.setImageResource(R.drawable.android_donut); //get icon
+            holder.ivicon.setImageResource(R.drawable.android_donut);
         }
+
+        // ✅ Sự kiện click item
+        holder.itemView.setOnClickListener(v -> {
+            activity.onItemClicked(position);
+        });
     }
+
     //getItemCount method for returning the size of arrayList
     @Override
     public int getItemCount() {
         return androidList.size();
     }
+
 }

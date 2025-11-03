@@ -4,85 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?attr/colorSurface"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:focusableInTouchMode="true"
-        android:descendantFocusability="blocksDescendants">
+        android:padding="16dp">
 
-        <!-- Nút Thêm -->
-        <Button
+        <!-- Nút thêm mới -->
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btadd"
+            style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:text="Add to Vertical List"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:text="Thêm vào danh sách"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:iconGravity="start"
+            android:iconPadding="8dp"
+            android:layout_marginBottom="24dp" />
 
-        <!-- Tiêu đề cho RecyclerView Ngang -->
+        <!-- Danh sách 1 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Horizontal Carousel"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:text="Android Versions - List 1"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
 
-        <!-- RecyclerView cuộn NGANG -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:clipToPadding="false"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"/>
-        <!-- Tiêu đề cho RecyclerView Ngang -->
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Danh sách 2 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Horizontal Carousel"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:text="Android Versions - List 2"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
 
-        <!-- RecyclerView cuộn NGANG -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewHorizontal1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:clipToPadding="false"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"/>
-        <!-- Tiêu đề cho RecyclerView Ngang -->
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Danh sách 3 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Horizontal Carousel"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:text="Android Versions - List 3"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
 
-        <!-- RecyclerView cuộn NGANG -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewHorizontal2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:clipToPadding="false"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"/>
-
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:layout_marginBottom="16dp" />
 
     </LinearLayout>
 
