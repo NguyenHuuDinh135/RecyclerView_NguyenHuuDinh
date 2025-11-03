@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="blocksDescendants">
+
+        <!-- Nút Thêm -->
+        <Button
+            android:id="@+id/btadd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Add to Vertical List"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Tiêu đề cho RecyclerView Ngang -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Horizontal Carousel"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- RecyclerView cuộn NGANG -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+        <!-- Tiêu đề cho RecyclerView Ngang -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Horizontal Carousel"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- RecyclerView cuộn NGANG -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHorizontal1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+        <!-- Tiêu đề cho RecyclerView Ngang -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Horizontal Carousel"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- RecyclerView cuộn NGANG -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHorizontal2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
